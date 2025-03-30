@@ -20,18 +20,18 @@ const projects = [
     githubLink: "https://github.com/Rak-Code/Athena",
     image: "/Athena2.png?height=200&width=400",
   },
-  {
-    title: "Personal Portfolio Website",
-    description: "A responsive portfolio website with modern design and contact functionality.",
-    technologies: ["React", "Tailwind CSS", "Firebase"],
-    features: [
-      "Fully responsive UI",
-      "Integrated contact form with email notification functionality",
-      "Modern and minimal design",
-    ],
-    githubLink: "https://rak-code.github.io/rakportfolio/",
-    image: "./Portfolio_project.png?height=200&width=400",
-  },
+  // {
+  //   title: "Personal Portfolio Website",
+  //   description: "A responsive portfolio website with modern design and contact functionality.",
+  //   technologies: ["React", "Tailwind CSS", "Firebase"],
+  //   features: [
+  //     "Fully responsive UI",
+  //     "Integrated contact form with email notification functionality",
+  //     "Modern and minimal design",
+  //   ],
+  //   githubLink: "https://rak-code.github.io/rakportfolio/",
+  //   image: "./Portfolio_project.png?height=200&width=400",
+  // },
   {
     title: "Admin Dashboard ",
     description: "A system for managing and providing feedback on assignments.",
@@ -44,18 +44,18 @@ const projects = [
     githubLink: "https://github.com/Rak-Code/customerfeedbackfront",
     image: "./AThena.png?height=200&width=400",
   },
-  {
-    title: "AI-Powered Chatbot Platform",
-    description: "A chatbot application using Google Gemini AI with a scalable backend, interactive UI, and persistent conversation storage.",
-    technologies: ["Spring Boot", "React", "MongoDB"],
-    features: [
-      "AI Chatbot Integration with Google Gemini AI for intelligent responsess",
-      "Spring Boot Backend with WebFlux for non-blocking API calls",
-      "MongoDB Storage for persistent chat history",
-    ],
-    githubLink: "https://github.com/Rak-Code/GeminiChatBot",
-    image: "./Chatbot.png?height=200&width=400",
-  },
+  // {
+  //   title: "AI-Powered Chatbot Platform",
+  //   description: "A chatbot application using Google Gemini AI with a scalable backend, interactive UI, and persistent conversation storage.",
+  //   technologies: ["Spring Boot", "React", "MongoDB"],
+  //   features: [
+  //     "AI Chatbot Integration with Google Gemini AI for intelligent responsess",
+  //     "Spring Boot Backend with WebFlux for non-blocking API calls",
+  //     "MongoDB Storage for persistent chat history",
+  //   ],
+  //   githubLink: "https://github.com/Rak-Code/GeminiChatBot",
+  //   image: "./Chatbot.png?height=200&width=400",
+  // },
   {
     title: "Quiz Application using Spring Boot",
     description: "A quiz application with user authentication, question management, and score tracking.",
@@ -69,18 +69,18 @@ const projects = [
     githubLink: "https://github.com/Rak-Code/QuizAppSpringBoot",
     image: "./Quiz.png?height=200&width=400",
   },
-  {
-    title: "Authetication and Authorization System",
-    description: "A secure authentication and authorization system using Spring Security and JWT.",
-    technologies: ["Spring Boot", "MySQL", "React"],
-    features: [
-      "User registration and login with JWT",
-      "Role-based access control",
-      "Secure password storage and encryption",
-    ],
-    githubLink: "https://github.com/Rak-Code/SpringSecurity",
-    image: "./placeholder.svg?height=200&width=400",
-  },
+  // {
+  //   title: "Authetication and Authorization System",
+  //   description: "A secure authentication and authorization system using Spring Security and JWT.",
+  //   technologies: ["Spring Boot", "MySQL", "React"],
+  //   features: [
+  //     "User registration and login with JWT",
+  //     "Role-based access control",
+  //     "Secure password storage and encryption",
+  //   ],
+  //   githubLink: "https://github.com/Rak-Code/SpringSecurity",
+  //   image: "./placeholder.svg?height=200&width=400",
+  // },
     
 ]
 
