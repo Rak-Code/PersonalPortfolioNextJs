@@ -59,7 +59,7 @@ const projects = [
   {
     title: "Quiz Application using Spring Boot",
     description: "A quiz application with user authentication, question management, and score tracking.",
-    technologies: ["Spring Boot",  "MySQL"],
+    technologies: ["Spring Boot",  "MySQL", "Thymeleaf"],
 
     features: [
       "User authentication and role management",
@@ -69,6 +69,19 @@ const projects = [
     githubLink: "https://github.com/Rak-Code/QuizAppSpringBoot",
     image: "./Quiz.png?height=200&width=400",
   },
+  {
+    title: "Authetication and Authorization System",
+    description: "A secure authentication and authorization system using Spring Security and JWT.",
+    technologies: ["Spring Boot", "MySQL", "Thymeleaf"],
+    features: [
+      "User registration and login with JWT",
+      "Role-based access control",
+      "Secure password storage and encryption",
+    ],
+    githubLink: "https://github.com/Rak-Code/SpringSecurity",
+    image: "./placeholder-logo.png?height=200&width=400",
+  },
+    
 ]
 
 export default function Projects() {
