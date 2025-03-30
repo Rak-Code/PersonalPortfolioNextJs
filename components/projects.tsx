@@ -56,6 +56,19 @@ const projects = [
     githubLink: "https://github.com/Rak-Code/GeminiChatBot",
     image: "./Chatbot.png?height=200&width=400",
   },
+  {
+    title: "Quiz Application using Spring Boot",
+    description: "A quiz application with user authentication, question management, and score tracking.",
+    technologies: ["Spring Boot",  "MySQL"],
+
+    features: [
+      "User authentication and role management",
+      "Admin dashboard for managing quiz questions and categories",
+      "Real-time score tracking and leaderboard",
+    ],
+    githubLink: "https://github.com/Rak-Code/QuizAppSpringBoot",
+    image: "./Quiz.png?height=200&width=400",
+  },
 ]
 
 export default function Projects() {
