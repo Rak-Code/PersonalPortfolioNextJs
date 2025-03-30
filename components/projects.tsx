@@ -44,6 +44,18 @@ const projects = [
     githubLink: "https://github.com/Rak-Code/customerfeedbackfront",
     image: "./AThena.png?height=200&width=400",
   },
+  {
+    title: "AI-Powered Chatbot Platform",
+    description: "A chatbot application using Google Gemini AI with a scalable backend, interactive UI, and persistent conversation storage.",
+    technologies: ["Spring Boot", "React", "MongoDB"],
+    features: [
+      "AI Chatbot Integration with Google Gemini AI for intelligent responsess",
+      "Spring Boot Backend with WebFlux for non-blocking API calls",
+      "MongoDB Storage for persistent chat history",
+    ],
+    githubLink: "https://github.com/Rak-Code/GeminiChatBot",
+    image: "./Chatbot.png?height=200&width=400",
+  },
 ]
 
 export default function Projects() {
