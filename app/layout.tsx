@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Inter } from "next/font/google"
 
 export const metadata: Metadata = {
   title: "Rakesh Gupta | Java Developer",
@@ -9,6 +10,11 @@ export const metadata: Metadata = {
   generator: 'v0.dev'
 }
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`min-h-screen bg-background antialiased`}>
+      <body className={`${inter.className} min-h-screen bg-background antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light">
           {children}
         </ThemeProvider>

@@ -20,7 +20,9 @@ const skillCategories = [
     name: "Backend",
     skills: [
       { name: "Java", icon: <Coffee className="h-5 w-5" /> },
+      { name: "JDBC", icon: <Layers className="h-5 w-5" /> },
       { name: "Spring Boot", icon: <Layers className="h-5 w-5" /> },
+    
     ],
     icon: <Server className="h-6 w-6" />,
   },
