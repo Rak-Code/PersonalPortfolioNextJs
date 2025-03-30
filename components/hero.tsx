@@ -18,7 +18,7 @@ export default function Hero() {
           <Link href="./Rakesh_Gupta_CV.pdf" target="_blank">
             <Button size="lg" className="font-medium transition-all duration-300 hover:scale-105">
               <FileText className="mr-2 h-5 w-5" />
-              View CV
+              View My CV
             </Button>
           </Link>
         </div>
