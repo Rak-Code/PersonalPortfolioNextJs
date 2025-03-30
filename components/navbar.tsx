@@ -143,7 +143,7 @@ export default function Navbar() {
               <Link href="https://x.com/RakeshG33139449" target="_blank" aria-label="Twitter">
                 <Twitter className="h-5 w-5 hover:text-primary transition-colors duration-200" />
               </Link>
-              {/* <ModeToggle /> */}
+              <ModeToggle />
             </div>
           </nav>
         </div>

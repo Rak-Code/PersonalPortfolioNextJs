@@ -68,8 +68,8 @@ export default function GithubProfile() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row gap-6">
-        <Card className="flex-1 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+        <Card className="w-full flex-1 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
           <CardHeader>
             <div className="flex items-center gap-3">
               <div className="p-2 bg-accent rounded-lg">
@@ -81,12 +81,12 @@ export default function GithubProfile() {
               </div>
             </div>
           </CardHeader>
-          <CardContent>
-            <div className="flex justify-center bg-card/50 p-4 rounded-lg border border-border">
+          <CardContent className="overflow-x-auto">
+            <div className="flex justify-center bg-card/50 p-2 md:p-4 rounded-lg border border-border min-w-[300px]">
               <img
                 src={`https://ghchart.rshah.org/Rak-Code`}
                 alt="GitHub Contribution Graph"
-                className="w-full max-w-2xl"
+                className="w-full h-auto"
               />
             </div>
           </CardContent>
@@ -97,11 +97,11 @@ export default function GithubProfile() {
         <Code className="h-5 w-5 text-primary" />
         Top Repositories
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {repos.map((repo) => (
           <Card
             key={repo.name}
-            className="flex flex-col h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+            className="flex flex-col h-full min-h-[200px] transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
           >
             <CardHeader>
               <div className="flex items-center gap-3">
@@ -116,7 +116,7 @@ export default function GithubProfile() {
                 </div>
               </div>
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow p-4">
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center">
                   <Star className="mr-1 h-4 w-4 text-yellow-500" />
@@ -128,7 +128,7 @@ export default function GithubProfile() {
                 </div>
               </div>
             </CardContent>
-            <div className="p-4 pt-0 mt-auto">
+            <div className="p-4">
               <Link href={repo.html_url} target="_blank" className="w-full">
                 <Button variant="outline" className="w-full transition-all duration-300 hover:scale-105">
                   <Github className="mr-2 h-4 w-4" />
