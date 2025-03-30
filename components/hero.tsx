@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="relative w-64 h-64 md:w-80 md:h-80">
           <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-primary transition-all duration-300 hover:scale-[1.02] animate-pulse-glow">
             <Image
-              src="/placeholder.svg?height=320&width=320"
+              src="./Profile.png?height=320&width=320"
               alt="Rakesh Gupta"
               fill
               className="object-cover"
