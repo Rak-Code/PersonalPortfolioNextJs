@@ -8,7 +8,7 @@ export default function Hero() {
     <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-4 md:gap-8 py-4 md:py-8">
       <div className="flex-1 space-y-4 md:space-y-6 text-center md:text-left">
         <div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">Hi, I&apos;m a Java Developer</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">Hi, I&apos;m a <span className="text-muted-foreground text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">Java Developer</span></h1>
         </div>
         <p className="text-base md:text-lg text-muted-foreground max-w-prose mx-auto md:mx-0">
           Passionate about building robust backend systems and scalable web applications. With expertise in Java, Spring

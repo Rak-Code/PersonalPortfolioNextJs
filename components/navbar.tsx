@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between px-4">
         <div className="flex items-center">
           <Link href="/" className="text-xl font-bold text-primary">
-            Portfolio
+            Portfolio 
           </Link>
         </div>
 
