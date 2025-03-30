@@ -79,7 +79,7 @@ const projects = [
       "Secure password storage and encryption",
     ],
     githubLink: "https://github.com/Rak-Code/SpringSecurity",
-    image: "./placeholder-logo.png?height=200&width=400",
+    image: "./placeholder.svg?height=200&width=400",
   },
     
 ]
