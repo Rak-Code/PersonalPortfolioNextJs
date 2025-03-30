@@ -72,7 +72,7 @@ const projects = [
   {
     title: "Authetication and Authorization System",
     description: "A secure authentication and authorization system using Spring Security and JWT.",
-    technologies: ["Spring Boot", "MySQL", "Thymeleaf"],
+    technologies: ["Spring Boot", "MySQL", "React"],
     features: [
       "User registration and login with JWT",
       "Role-based access control",
