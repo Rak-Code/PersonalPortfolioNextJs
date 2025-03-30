@@ -23,7 +23,7 @@ const certificates = [
   {
     title: "NSDC Certification",
     issuer: "NSDC",
-    date: "2023",
+    date: "2025",
     status: "Pending",
     link: "#",
     image: "/placeholder.svg?height=200&width=400",
