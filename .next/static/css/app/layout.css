@@ -781,12 +781,6 @@ video {
 .mt-auto {
   margin-top: auto;
 }
-.mt-1 {
-  margin-top: 0.25rem;
-}
-.mr-0 {
-  margin-right: 0px;
-}
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1626,10 +1620,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 .font-bold {
   font-weight: 700;
@@ -3050,6 +3040,11 @@ video {
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .md\:text-left {

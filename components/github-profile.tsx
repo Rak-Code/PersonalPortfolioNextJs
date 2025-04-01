@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Github, Star, GitFork, Code, Activity } from "lucide-react"
 import Link from "next/link"
+import { FadeInSection } from "./animations/fade-in-section"
 
 interface Repository {
   name: string
@@ -97,12 +98,10 @@ export default function GithubProfile() {
         <Code className="h-5 w-5 text-primary" />
         Top Repositories
       </h3>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {repos.map((repo) => (
-          <Card
-            key={repo.name}
-            className="flex flex-col h-full min-h-[200px] transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
-          >
+          <Card key={repo.name} className="flex flex-col h-full min-h-[200px] transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
             <CardHeader>
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-accent rounded-lg">

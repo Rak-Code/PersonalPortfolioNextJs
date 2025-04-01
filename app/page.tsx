@@ -6,40 +6,36 @@ import GithubProfile from "@/components/github-profile"
 import Certificates from "@/components/certificates"
 import ContactForm from "@/components/contact-form"
 import Footer from "@/components/footer"
+import { Section } from "@/components/ui/section"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
       <main className="container mx-auto px-4 py-8">
-        <section id="home" className="py-10">
+        <Section>
           <Hero />
-        </section>
+        </Section>
 
-        <section id="skills" className="py-16">
-          <h2 className="text-3xl font-bold text-center mb-10">Skills</h2>
+        <Section>
           <Skills />
-        </section>
+        </Section>
 
-        <section id="projects" className="py-16">
-          <h2 className="text-3xl font-bold text-center mb-10">Projects</h2>
+        <Section>
           <Projects />
-        </section>
+        </Section>
 
-        <section id="github" className="py-16">
-          <h2 className="text-3xl font-bold text-center mb-10">GitHub Profile</h2>
+        <Section>
           <GithubProfile />
-        </section>
+        </Section>
 
-        <section id="certificates" className="py-16">
-          <h2 className="text-3xl font-bold text-center mb-10">Certificates</h2>
+        <Section>
           <Certificates />
-        </section>
+        </Section>
 
-        <section id="contact" className="py-16">
-          <h2 className="text-3xl font-bold text-center mb-10">Contact Me</h2>
+        <Section>
           <ContactForm />
-        </section>
+        </Section>
       </main>
       <Footer />
     </div>
