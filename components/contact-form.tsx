@@ -1,51 +1,65 @@
-"use client"
+"use client";
 
-import type React from "react"
-
-import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
-import { Send, CheckCircle, AlertCircle, Mail, User, MessageSquare } from "lucide-react"
+import type React from "react";
+import { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Mail,
+  User,
+  MessageSquare,
+} from "lucide-react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
     try {
-      // This is a mock submission - in a real app, you'd send this to your backend
-      // or use a service like FormSubmit
-      await new Promise((resolve) => setTimeout(resolve, 1500))
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-      // Simulate successful submission
-      setSubmitStatus("success")
-      setFormData({ name: "", email: "", message: "" })
+      if (!res.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      setSubmitStatus("error")
+      console.error("Error:", error);
+      setSubmitStatus("error");
     } finally {
-      setIsSubmitting(false)
-
-      // Reset status after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus("idle")
-      }, 5000)
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus("idle"), 5000);
     }
-  }
+  };
 
   return (
     <Card className="max-w-lg mx-auto transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
@@ -56,7 +70,9 @@ export default function ContactForm() {
           </div>
           <div>
             <CardTitle>Get In Touch</CardTitle>
-            <CardDescription>Send me a message and I'll get back to you soon</CardDescription>
+            <CardDescription>
+              Send me a message and I'll get back to you soon
+            </CardDescription>
           </div>
         </div>
       </CardHeader>
@@ -142,6 +158,5 @@ export default function ContactForm() {
         </form>
       </CardContent>
     </Card>
-  )
+  );
 }
-
