@@ -1,3 +1,7 @@
+"use client"
+
+import { useState } from "react"
+import { ChevronDown, ChevronUp } from "lucide-react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -85,13 +89,20 @@ const projects = [
 ]
 
 export default function Projects() {
+  const [expandedCards, setExpandedCards] = useState<number[]>([])
+
+  const toggleCard = (index: number) => {
+    setExpandedCards(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    )
+  }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {projects.map((project, index) => (
-        <Card
-          key={index}
-          className="flex flex-col h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg overflow-hidden"
-        >
+        <Card key={index} className="flex flex-col h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg overflow-hidden">
           <div className="relative h-48 w-full">
             <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
@@ -100,24 +111,42 @@ export default function Projects() {
               </CardHeader>
             </div>
           </div>
+
           <CardContent className="flex-grow pt-4">
-            <CardDescription className="mb-4">{project.description}</CardDescription>
-            <div className="mb-4 flex flex-wrap gap-2">
-              {project.technologies.map((tech) => (
-                <Badge key={tech} variant="secondary" className="transition-all duration-300 hover:scale-105">
-                  {tech}
-                </Badge>
-              ))}
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">Key Features:</h4>
-              <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                {project.features.map((feature, i) => (
-                  <li key={i}>{feature}</li>
+            {/* Mobile View: Show expand/collapse button */}
+            <button 
+              className="md:hidden w-full flex items-center justify-between text-sm text-muted-foreground mb-2"
+              onClick={() => toggleCard(index)}
+            >
+              <span>Show {expandedCards.includes(index) ? 'less' : 'more'}</span>
+              {expandedCards.includes(index) ? (
+                <ChevronUp className="h-4 w-4" />
+              ) : (
+                <ChevronDown className="h-4 w-4" />
+              )}
+            </button>
+
+            {/* Description and features - hidden by default on mobile */}
+            <div className={`${expandedCards.includes(index) ? 'block' : 'hidden'} md:block`}>
+              <CardDescription className="mb-4">{project.description}</CardDescription>
+              <div className="mb-4 flex flex-wrap gap-2">
+                {project.technologies.map((tech) => (
+                  <Badge key={tech} variant="secondary" className="transition-all duration-300 hover:scale-105">
+                    {tech}
+                  </Badge>
                 ))}
-              </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">Key Features:</h4>
+                <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+                  {project.features.map((feature, i) => (
+                    <li key={i}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </CardContent>
+
           <CardFooter>
             <Link href={project.githubLink} target="_blank" className="w-full">
               <Button variant="outline" className="w-full transition-all duration-300 hover:scale-105">
