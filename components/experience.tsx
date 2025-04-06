@@ -70,7 +70,7 @@ export default function Experience() {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-medium text-primary">Client Projects</h4>
+                    <h4 className="font-medium text-primary">Some Client Projects</h4>
                     <div className="space-y-3">
                       {exp.projects.map((project, i) => (
                         <Link 
