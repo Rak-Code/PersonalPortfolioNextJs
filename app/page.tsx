@@ -1,13 +1,14 @@
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
 import Skills from "@/components/skills"
+import Experience from "@/components/experience" // new component
 import Projects from "@/components/projects"
 import GithubProfile from "@/components/github-profile"
 import Certificates from "@/components/certificates"
 import ContactForm from "@/components/contact-form"
 import Footer from "@/components/footer"
 import { Section } from "@/components/ui/section"
-import { Code2, FolderKanban, Award, GraduationCap, Mail } from "lucide-react"
+import { Code2, Briefcase, FolderKanban, Award, GraduationCap, Mail } from "lucide-react"
 
 export default function Home() {
   return (
@@ -24,6 +25,14 @@ export default function Home() {
             Skills & Technologies
           </h2>
           <Skills />
+        </Section>
+
+        <Section>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center flex items-center justify-center gap-2">
+            <Briefcase className="h-6 w-6 text-primary" />
+            Experience
+          </h2>
+          <Experience />
         </Section>
 
         <Section>

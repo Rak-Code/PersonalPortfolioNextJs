@@ -13,6 +13,10 @@ import {
   MonitorSmartphone,
   LayoutGrid,
   Rocket,
+  Cloud,
+  Flame,
+  Cable,
+  DatabaseZap,
 } from "lucide-react"
 
 const skillCategories = [
@@ -20,8 +24,8 @@ const skillCategories = [
     name: "Backend",
     skills: [
       { name: "Java", icon: <Coffee className="h-5 w-5" /> },
-      { name: "JDBC", icon: <Layers className="h-5 w-5" /> },
       { name: "Spring Boot", icon: <Layers className="h-5 w-5" /> },
+      { name: "Firebase", icon: <Flame className="h-5 w-5" /> },
     
     ],
     icon: <Server className="h-6 w-6" />,
@@ -41,7 +45,8 @@ const skillCategories = [
     name: "Databases",
     skills: [
       { name: "MySQL", icon: <Database className="h-5 w-5" /> },
-      { name: "MongoDB", icon: <Database className="h-5 w-5" /> },
+      { name: "MongoDB", icon: <Database  className="h-5 w-5" /> },
+      { name: "JDBC", icon: <Cable className="h-5 w-5" /> },
     ],
     icon: <Database className="h-6 w-6" />,
   },
@@ -51,6 +56,7 @@ const skillCategories = [
       { name: "Git", icon: <GitBranch className="h-5 w-5" /> },
       { name: "GitHub", icon: <Github className="h-5 w-5" /> },
       { name: "Vercel", icon: <Rocket className="h-5 w-5" /> },
+      { name: "AWS", icon: <Cloud className="h-5 w-5" />}
     ],
     icon: <GitBranch className="h-6 w-6" />,
   },

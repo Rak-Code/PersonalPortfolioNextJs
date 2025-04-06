@@ -1,19 +1,26 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { FileText } from "lucide-react"
+import { FileText } from "lucide-react"  
 
 export default function Hero() {
   return (
     <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-4 md:gap-8 py-4 md:py-8">
       <div className="flex-1 space-y-4 md:space-y-6 text-center md:text-left">
         <div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">Hi, I&apos;m a <span className="text-muted-foreground text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">Java Developer</span></h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+            Hi, I&apos;m a <span className="text-muted-foreground text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">Java Developer</span>
+          </h1>
         </div>
         <p className="text-base md:text-lg text-muted-foreground max-w-prose mx-auto md:mx-0">
-          Passionate about building robust backend systems and scalable web applications. With expertise in Java, Spring
-          Boot, and modern frontend technologies, I strive to deliver clean and maintainable code.
+          Passionate about building robust backend systems and scalable web applications. With expertise in Java, Spring Boot, and modern frontend technologies, I strive to deliver clean and maintainable code.
         </p>
+        <div className="space-y-2">
+          <p className="text-base md:text-lg text-muted-foreground">
+            <strong>Location:</strong> Mumbai, Bandra
+          </p>
+      
+        </div>
         <div className="pt-2">
           <Link href="./Rakesh_Gupta_CV.pdf" target="_blank">
             <Button size="lg" className="font-medium transition-all duration-300 hover:scale-105">
@@ -42,4 +49,3 @@ export default function Hero() {
     </div>
   )
 }
-

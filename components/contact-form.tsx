@@ -71,7 +71,8 @@ export default function ContactForm() {
           <div>
             <CardTitle>Get In Touch</CardTitle>
             <CardDescription>
-              Send me a message and I'll get back to you soon
+             Want your own stunning portfolio website? <br />
+            Send me a message—I'd love to help!
             </CardDescription>
           </div>
         </div>
