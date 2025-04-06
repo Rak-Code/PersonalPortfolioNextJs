@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="flex-1 space-y-4 md:space-y-6 text-center md:text-left">
         <div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-            Hi, I&apos;m Rakesh, <br />e khuch
+            Hi, I&apos;m Rakesh, <br /><span className="text-muted-foreground text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"> Full Stack Java Developer</span>
           </h1>
         </div>
         <p className="text-base md:text-lg text-muted-foreground max-w-prose mx-auto md:mx-0">
