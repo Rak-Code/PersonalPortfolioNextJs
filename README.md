@@ -29,7 +29,7 @@ A key feature of this portfolio is the GitHub Profile Component, which provides:
 
 ## Live Demo
 
-Visit the live demo: [https://your-portfolio.vercel.app](https://your-portfolio.vercel.app)
+Visit the live demo: https://rakesh-gupta-portfolio-next-js-six.vercel.app/
 
 ## Portfolio Sections
 
