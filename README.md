@@ -1,3 +1,73 @@
+# Personal Portfolio Website with GitHub Integration
+
+Welcome to my personal portfolio website project - a modern, responsive web application built with Next.js that showcases your professional profile and dynamically integrates with GitHub to display your latest work and contributions.
+
+## Portfolio Features
+
+- 🎨 Modern and Clean Design
+- 💼 Professional Experience Timeline
+- 🛠️ Skills and Technologies Showcase
+- 📝 Blog/Articles Section
+- 📫 Contact Form with Email Integration
+- 🌙 Dark/Light Theme Toggle
+- 📱 Mobile-First Responsive Design
+- 🔍 SEO Optimized
+- 📊 Analytics Integration
+
+## GitHub Profile Integration
+
+A key feature of this portfolio is the GitHub Profile Component, which provides:
+
+- 📊 Live GitHub Contribution Graph with interactive tooltips
+- 📌 Top Repositories Display (sorted by stars)
+- 🎯 Detailed Repository Stats (stars, forks, and watchers)
+- 🌓 Dark/Light Theme Support with system preference detection
+- 📱 Fully Responsive Design for all screen sizes
+- 🚀 Fast and Optimized Performance
+- 🔄 Auto-refresh capability
+- 🔒 Rate Limit Aware
+
+## Live Demo
+
+Visit the live demo: [https://your-portfolio.vercel.app](https://your-portfolio.vercel.app)
+
+## Portfolio Sections
+
+1. **Hero Section**
+   - Professional introduction
+   - Call-to-action buttons
+   - Social media links
+
+2. **About Me**
+   - Professional summary
+   - Personal background
+   - Career objectives
+
+3. **Experience**
+   - Work history
+   - Education
+   - Certifications
+
+4. **Projects Showcase**
+   - Featured projects
+   - GitHub repositories
+   - Live demos
+
+5. **Skills**
+   - Technical skills
+   - Soft skills
+   - Tools and technologies
+
+6. **Blog/Articles**
+   - Technical writing
+   - Industry insights
+   - Tutorial posts
+
+7. **Contact**
+   - Contact form
+   - Social links
+   - Resume download
+
 # GitHub Profile Component
 
 A modern, responsive React component built with Next.js and shadcn/ui to display GitHub profile information and top repositories. This component provides an elegant way to showcase your GitHub presence on any website.
