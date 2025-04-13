@@ -4,10 +4,23 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 
+// Enriched metadata with additional keywords
 export const metadata: Metadata = {
   title: "Rakesh Gupta | Java Developer",
   description:
-    "Portfolio website of Rakesh Gupta, Java Developer specializing in Spring Boot and modern web technologies",
+    "Portfolio website of Rakesh Gupta, a Java Developer specializing in Spring Boot, Next.js, and full-stack web development using modern web technologies.",
+  keywords: [
+    "Java Developer",
+    "Spring Boot",
+    "Next.js",
+    "Full Stack Developer",
+    "Web Development",
+    "Modern Web Technologies",
+    "Java",
+    "Portfolio",
+    "Software Developer",
+    "Tech Portfolio"
+  ],
   generator: 'v0.dev'
 }
 
