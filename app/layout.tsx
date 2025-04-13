@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* ✅ Google Search Console Verification Meta Tag */}
-        <meta name="google-site-verification" content="google3329f3aaef28b607" />
+        <meta name="google-site-verification" content="-EWmRWoiBgHjFIWOiTMOYRrT9Ga09mN4qHnfSLuU7Zc" />
       </head>
       <body className={`${inter.className} min-h-screen bg-background antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light">
