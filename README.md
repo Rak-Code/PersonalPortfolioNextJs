@@ -68,6 +68,98 @@ Visit the live demo: [https://your-portfolio.vercel.app](https://your-portfolio.
    - Social links
    - Resume download
 
+## Navigation and Scrolling
+
+### Smooth Scroll Implementation
+
+1. Add IDs to your section elements:
+```tsx
+<section id="about">About Content</section>
+<section id="experience">Experience Content</section>
+<section id="projects">Projects Content</section>
+// etc...
+```
+
+2. Create a Navigation component:
+```tsx
+// components/Navigation.tsx
+export const Navigation = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
+  return (
+    <nav className="fixed top-0 z-50 w-full bg-background/95 backdrop-blur">
+      <div className="flex items-center justify-between p-4">
+        <ul className="flex gap-6">
+          <li>
+            <button onClick={() => scrollToSection('about')}>About</button>
+          </li>
+          <li>
+            <button onClick={() => scrollToSection('experience')}>Experience</button>
+          </li>
+          <li>
+            <button onClick={() => scrollToSection('projects')}>Projects</button>
+          </li>
+          {/* Add more navigation items */}
+        </ul>
+      </div>
+    </nav>
+  );
+};
+```
+
+3. Add scroll offset for fixed header:
+```css
+/* globals.css */
+html {
+  scroll-padding-top: 80px; /* Adjust based on your navbar height */
+}
+```
+
+4. For hash links in URLs, add this to your page:
+```tsx
+useEffect(() => {
+  if (window.location.hash) {
+    const id = window.location.hash.replace('#', '');
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  }
+}, []);
+```
+
+### Active Section Highlight
+
+```tsx
+// components/Navigation.tsx
+const [activeSection, setActiveSection] = useState('');
+
+useEffect(() => {
+  const handleScroll = () => {
+    const sections = document.querySelectorAll('section');
+    let current = '';
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (window.scrollY >= sectionTop - 100) {
+        current = section.getAttribute('id') || '';
+      }
+    });
+
+    setActiveSection(current);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+```
+
+This will enable smooth scrolling when clicking navigation items and highlight the active section in the navigation bar.
+
 # GitHub Profile Component
 
 A modern, responsive React component built with Next.js and shadcn/ui to display GitHub profile information and top repositories. This component provides an elegant way to showcase your GitHub presence on any website.

@@ -16,6 +16,19 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src * 'self' data: blob: 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline';"
+          }
+        ]
+      }
+    ];
+  },
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
