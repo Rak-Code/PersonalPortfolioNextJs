@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 
-// Enriched metadata with additional keywords
+// ✅ Corrected favicon path
 export const metadata: Metadata = {
   title: "Rakesh Gupta | Java Developer",
   description:
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   generator: "v0.dev",
   icons: {
-    icon: "./Fabiconlogo.png",
+    icon: "/fabicon.png", // ✅ Use root-relative path
   },
 }
 
@@ -45,8 +45,8 @@ export default function RootLayout({
           name="google-site-verification"
           content="-EWmRWoiBgHjFIWOiTMOYRrT9Ga09mN4qHnfSLuU7Zc"
         />
-        {/* ✅ Fallback link tag for favicon (optional but safe) */}
-        <link rel="icon" href="./Fabiconlogo.png" />
+        {/* ✅ Fallback favicon link tag */}
+        <link rel="icon" href="/fabicon.png" type="image/png" />
       </head>
       <body className={`${inter.className} min-h-screen bg-background antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light">
