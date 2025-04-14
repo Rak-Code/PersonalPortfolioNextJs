@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   generator: "v0.dev",
   icons: {
-    icon: "/Fabiconlogo.png",
+    icon: "./Fabiconlogo.png",
   },
 }
 
@@ -46,7 +46,7 @@ export default function RootLayout({
           content="-EWmRWoiBgHjFIWOiTMOYRrT9Ga09mN4qHnfSLuU7Zc"
         />
         {/* ✅ Fallback link tag for favicon (optional but safe) */}
-        <link rel="icon" href="/Fabiconlogo.png" />
+        <link rel="icon" href="./Fabiconlogo.png" />
       </head>
       <body className={`${inter.className} min-h-screen bg-background antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light">
