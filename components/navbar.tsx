@@ -72,7 +72,7 @@ export default function Navbar() {
             <Github className="h-5 w-5 hover:text-primary transition-colors duration-200" />
           </Link>
           <Link
-            href="http://linkedin.com/in/rakesh-gupta-developer"
+            href="http://linkedin.com/in/rakesh-gupta-developer/"
             target="_blank"
             aria-label="LinkedIn"
             className="transition-all duration-300 hover:scale-105"
@@ -137,7 +137,7 @@ export default function Navbar() {
               <Link href="https://github.com/Rak-Code" target="_blank" aria-label="GitHub">
                 <Github className="h-5 w-5 hover:text-primary transition-colors duration-200" />
               </Link>
-              <Link href="http://linkedin.com/in/rakesh-gupta-developer" target="_blank" aria-label="LinkedIn">
+              <Link href="http://linkedin.com/in/rakesh-gupta-developer/" target="_blank" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5 hover:text-primary transition-colors duration-200" />
               </Link>
               <Link href="https://x.com/RakeshG33139449" target="_blank" aria-label="Twitter">

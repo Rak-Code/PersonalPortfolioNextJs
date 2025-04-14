@@ -21,7 +21,10 @@ export const metadata: Metadata = {
     "Software Developer",
     "Tech Portfolio"
   ],
-  generator: 'v0.dev'
+  generator: "v0.dev",
+  icons: {
+    icon: "/Fabiconlogo.png",
+  },
 }
 
 const inter = Inter({
@@ -38,7 +41,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* ✅ Google Search Console Verification Meta Tag */}
-        <meta name="google-site-verification" content="-EWmRWoiBgHjFIWOiTMOYRrT9Ga09mN4qHnfSLuU7Zc" />
+        <meta
+          name="google-site-verification"
+          content="-EWmRWoiBgHjFIWOiTMOYRrT9Ga09mN4qHnfSLuU7Zc"
+        />
+        {/* ✅ Fallback link tag for favicon (optional but safe) */}
+        <link rel="icon" href="/Fabiconlogo.png" />
       </head>
       <body className={`${inter.className} min-h-screen bg-background antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light">
