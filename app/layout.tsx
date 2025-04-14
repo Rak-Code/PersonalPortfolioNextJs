@@ -45,8 +45,9 @@ export default function RootLayout({
           name="google-site-verification"
           content="-EWmRWoiBgHjFIWOiTMOYRrT9Ga09mN4qHnfSLuU7Zc"
         />
-        {/* ✅ Fallback favicon link tag */}
-        <link rel="icon" href="/fabicon.ico" type="image/png" />
+        {/* Favicons */}
+  <link rel="icon" href="/fabicon.ico" />
+  <link rel="shortcut icon" href="/fabicon.ico" />
       </head>
       <body className={`${inter.className} min-h-screen bg-background antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light">
