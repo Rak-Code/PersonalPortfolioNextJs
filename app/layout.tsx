@@ -1,8 +1,8 @@
-import type { Metadata } from "next"
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/react"
+import type { Metadata } from "next";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 // ✅ Corrected favicon path
 export const metadata: Metadata = {
@@ -19,23 +19,23 @@ export const metadata: Metadata = {
     "Java",
     "Portfolio",
     "Software Developer",
-    "Tech Portfolio"
+    "Tech Portfolio",
   ],
   generator: "v0.dev",
   icons: {
     icon: "/fabicon.ico", // ✅ Use root-relative path
   },
-}
+};
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-})
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -46,15 +46,17 @@ export default function RootLayout({
           content="-EWmRWoiBgHjFIWOiTMOYRrT9Ga09mN4qHnfSLuU7Zc"
         />
         {/* Favicons */}
-  <link rel="icon" href="/fabicon.ico" />
-  <link rel="shortcut icon" href="/fabicon.ico" />
+        <link rel="icon" href="/fabicon.ico" />
+        <link rel="shortcut icon" href="/fabicon.ico" />
       </head>
-      <body className={`${inter.className} min-h-screen bg-background antialiased`}>
+      <body
+        className={`${inter.className} min-h-screen bg-background antialiased`}
+      >
         <ThemeProvider attribute="class" defaultTheme="light">
           {children}
         </ThemeProvider>
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
