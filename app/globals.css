@@ -78,3 +78,43 @@
   }
 }
 
+/* Swiper overrides */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: auto !important;
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 0 !important;
+  margin-top: 1rem;
+}
+
+.swiper-pagination-bullet {
+  background: var(--primary);
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Swiper slide fixes */
+.mySwiper .swiper-slide {
+  width: 100% !important; /* Ensure each slide takes full width */
+  flex-shrink: 0; /* Prevent shrinking of slides */
+}
+
+.mySwiper .swiper-wrapper {
+  display: flex;
+  align-items: stretch; /* Ensure slides stretch to full height */
+}
+
+.mySwiper .swiper-pagination {
+  bottom: 10px !important; /* Adjust pagination position */
+}
+

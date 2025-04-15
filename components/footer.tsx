@@ -56,6 +56,14 @@ export default function Footer() {
           </Link>
         </div>
       </div>
+
+      {/* Scroll to Top Button */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="fixed bottom-6 right-6 z-50 bg-primary text-white p-2 rounded-full shadow-lg hover:bg-primary/90 transition"
+      >
+        ↑
+      </button>
     </footer>
   )
 }

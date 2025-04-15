@@ -34,7 +34,7 @@ export default function GithubProfile() {
         const sortedRepos = data.sort((a: Repository, b: Repository) => 
           b.stargazers_count - a.stargazers_count
         )
-        setRepos(sortedRepos.slice(0, 1))
+        setRepos(sortedRepos.slice(0, 3))
         setLoading(false)
       } catch (err) {
         setError("Failed to load GitHub repositories")
@@ -94,49 +94,51 @@ export default function GithubProfile() {
         </Card>
       </div>
 
-      <h3 className="text-xl font-semibold mt-8 mb-4 flex items-center gap-2">
+      <h3 className="text-xl font-semibold mt-8 mb-4 flex items-center gap-2 justify-center text-center">
         <Code className="h-5 w-5 text-primary" />
         Top Repositories
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-        {repos.map((repo) => (
-          <Card key={repo.name} className="flex flex-col h-full min-h-[200px] transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
-            <CardHeader>
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-accent rounded-lg">
-                  <Github className="h-5 w-5" />
+      <div className="flex justify-center w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl w-full">
+          {repos.map((repo) => (
+            <Card key={repo.name} className="flex flex-col h-full min-h-[200px] transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-accent rounded-lg">
+                    <Github className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <CardTitle className="truncate">{repo.name}</CardTitle>
+                    <CardDescription className="line-clamp-2 h-10">
+                      {repo.description || "No description available"}
+                    </CardDescription>
+                  </div>
                 </div>
-                <div>
-                  <CardTitle className="truncate">{repo.name}</CardTitle>
-                  <CardDescription className="line-clamp-2 h-10">
-                    {repo.description || "No description available"}
-                  </CardDescription>
+              </CardHeader>
+              <CardContent className="flex-grow p-4">
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="flex items-center">
+                    <Star className="mr-1 h-4 w-4 text-yellow-500" />
+                    <span>{repo.stargazers_count}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <GitFork className="mr-1 h-4 w-4 text-green-500" />
+                    <span>{repo.forks_count}</span>
+                  </div>
                 </div>
+              </CardContent>
+              <div className="p-4">
+                <Link href={repo.html_url} target="_blank" className="w-full">
+                  <Button variant="outline" className="w-full transition-all duration-300 hover:scale-105">
+                    <Github className="mr-2 h-4 w-4" />
+                    View Repository
+                  </Button>
+                </Link>
               </div>
-            </CardHeader>
-            <CardContent className="flex-grow p-4">
-              <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                <div className="flex items-center">
-                  <Star className="mr-1 h-4 w-4 text-yellow-500" />
-                  <span>{repo.stargazers_count}</span>
-                </div>
-                <div className="flex items-center">
-                  <GitFork className="mr-1 h-4 w-4 text-green-500" />
-                  <span>{repo.forks_count}</span>
-                </div>
-              </div>
-            </CardContent>
-            <div className="p-4">
-              <Link href={repo.html_url} target="_blank" className="w-full">
-                <Button variant="outline" className="w-full transition-all duration-300 hover:scale-105">
-                  <Github className="mr-2 h-4 w-4" />
-                  View Repository
-                </Button>
-              </Link>
-            </div>
-          </Card>
-        ))}
+            </Card>
+          ))}
+        </div>
       </div>
 
       <div className="flex justify-center mt-6">

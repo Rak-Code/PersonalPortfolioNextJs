@@ -628,6 +628,9 @@ video {
 .bottom-0 {
   bottom: 0px;
 }
+.bottom-6 {
+  bottom: 1.5rem;
+}
 .left-0 {
   left: 0px;
 }
@@ -657,6 +660,9 @@ video {
 }
 .right-4 {
   right: 1rem;
+}
+.right-6 {
+  right: 1.5rem;
 }
 .top-0 {
   top: 0px;
@@ -1027,6 +1033,12 @@ video {
 }
 .min-w-\[var\(--radix-select-trigger-width\)\] {
   min-width: var(--radix-select-trigger-width);
+}
+.max-w-4xl {
+  max-width: 56rem;
+}
+.max-w-5xl {
+  max-width: 64rem;
 }
 .max-w-\[--skeleton-width\] {
   max-width: var(--skeleton-width);
@@ -1546,6 +1558,9 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.\!pb-12 {
+  padding-bottom: 3rem !important;
+}
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -1639,6 +1654,9 @@ video {
 }
 .font-semibold {
   font-weight: 600;
+}
+.italic {
+  font-style: italic;
 }
 .tabular-nums {
   --tw-numeric-spacing: tabular-nums;
@@ -1918,6 +1936,46 @@ video {
   animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+/* Swiper overrides */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: auto !important;
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 0 !important;
+  margin-top: 1rem;
+}
+
+.swiper-pagination-bullet {
+  background: var(--primary);
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Swiper slide fixes */
+.mySwiper .swiper-slide {
+  width: 100% !important; /* Ensure each slide takes full width */
+  flex-shrink: 0; /* Prevent shrinking of slides */
+}
+
+.mySwiper .swiper-wrapper {
+  display: flex;
+  align-items: stretch; /* Ensure slides stretch to full height */
+}
+
+.mySwiper .swiper-pagination {
+  bottom: 10px !important; /* Adjust pagination position */
+}
+
 .file\:border-0::file-selector-button {
   border-width: 0px;
 }
@@ -2095,6 +2153,12 @@ video {
 .hover\:shadow-lg:hover {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-md:hover {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2997,10 +3061,6 @@ video {
     height: 3rem;
   }
 
-  .md\:h-24 {
-    height: 6rem;
-  }
-
   .md\:h-6 {
     height: 1.5rem;
   }
@@ -3079,14 +3139,19 @@ video {
     padding: 1.5rem;
   }
 
-  .md\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
   .md\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .md\:py-8 {
@@ -3094,9 +3159,9 @@ video {
     padding-bottom: 2rem;
   }
 
-  .md\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+  .md\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .md\:text-left {
