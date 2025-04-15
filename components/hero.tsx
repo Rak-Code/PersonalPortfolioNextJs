@@ -1,7 +1,11 @@
+"use client"
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { FileText } from "lucide-react"  
+import React from "react"
+import Typed from "typed.js";
 
 export default function Hero() {
   return (
@@ -9,7 +13,22 @@ export default function Hero() {
       <div className="flex-1 space-y-4 md:space-y-6 text-center md:text-left">
         <div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-            Hi, I&apos;m Rakesh, <br /><span className="text-muted-foreground text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">Java Full Stack Developer</span>
+            Hi, I&apos;m Rakesh, <br />
+            <span className="text-muted-foreground text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+              <TypedWrapper
+                strings={[
+                  "Java Full Stack Developer",
+                  "Spring Boot Rest API Development",
+                  "React Enthusiast",
+                  "Backend Engineer",
+                  "Freelance Web Developer",
+                ]}
+                typeSpeed={50}
+                backSpeed={30}
+                backDelay={1500}
+                loop
+              />
+            </span>
           </h1>
         </div>
         <p className="text-base md:text-lg text-muted-foreground max-w-prose mx-auto md:mx-0">
@@ -19,7 +38,6 @@ export default function Hero() {
           <p className="text-base md:text-lg text-muted-foreground">
             <strong>Location:</strong> Mumbai, Bandra
           </p>
-      
         </div>
         <div className="pt-2">
           <Link href="./Rakesh_Gupta_CV.pdf" target="_blank">
@@ -47,5 +65,35 @@ export default function Hero() {
         </div>
       </div>
     </div>
-  )
+  );
+}
+
+function TypedWrapper({
+  strings,
+  typeSpeed,
+  backSpeed,
+  backDelay,
+  loop,
+}: {
+  strings: string[];
+  typeSpeed: number;
+  backSpeed: number;
+  backDelay: number;
+  loop: boolean;
+}) {
+  React.useEffect(() => {
+    const typed = new Typed("#typed-element", {
+      strings,
+      typeSpeed,
+      backSpeed,
+      backDelay,
+      loop,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, [strings, typeSpeed, backSpeed, backDelay, loop]);
+
+  return <span id="typed-element"></span>;
 }

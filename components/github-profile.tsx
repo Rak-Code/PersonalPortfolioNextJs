@@ -34,7 +34,7 @@ export default function GithubProfile() {
         const sortedRepos = data.sort((a: Repository, b: Repository) => 
           b.stargazers_count - a.stargazers_count
         )
-        setRepos(sortedRepos.slice(0, 3))
+        setRepos(sortedRepos.slice(0, 1))
         setLoading(false)
       } catch (err) {
         setError("Failed to load GitHub repositories")
