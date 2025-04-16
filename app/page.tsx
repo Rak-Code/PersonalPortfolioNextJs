@@ -13,6 +13,8 @@ import Footer from "@/components/footer"
 import { Section } from "@/components/ui/section"
 import { Code2, Briefcase, FolderKanban, Quote, Award, GraduationCap, Mail } from "lucide-react"
 
+
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -51,14 +53,14 @@ export default function Home() {
             <Projects />
           </Section>
         </section>
-
+{/* 
         <Section>
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center flex items-center justify-center gap-2">
             <Quote className="h-6 w-6 text-primary" />
             Testimonials
           </h2>
           <Testimonial />
-        </Section>
+        </Section> */}
 
         <Section>
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center flex items-center justify-center gap-2">
