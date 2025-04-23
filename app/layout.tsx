@@ -45,6 +45,7 @@ export default function RootLayout({
       <meta name="google-site-verification" content="Spwn1XNH-6c_YbWZkWNXxZsk_HiCZJr9Q6Yt5_hlROM" />
         {/* Favicons */}
         <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/Fabiconlogo.png" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
       <body
