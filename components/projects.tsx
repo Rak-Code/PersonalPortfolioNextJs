@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Github } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 const projects = [
   {
@@ -24,18 +25,6 @@ const projects = [
     githubLink: "https://github.com/Rak-Code/Athena",
     image: "/Athena2.png?height=200&width=400",
   },
-  // {
-  //   title: "Personal Portfolio Website",
-  //   description: "A responsive portfolio website with modern design and contact functionality.",
-  //   technologies: ["React", "Tailwind CSS", "Firebase"],
-  //   features: [
-  //     "Fully responsive UI",
-  //     "Integrated contact form with email notification functionality",
-  //     "Modern and minimal design",
-  //   ],
-  //   githubLink: "https://rak-code.github.io/rakportfolio/",
-  //   image: "./Portfolio_project.png?height=200&width=400",
-  // },
   {
     title: "Admin Dashboard ",
     description: "A system for managing and providing feedback on assignments.",
@@ -48,23 +37,10 @@ const projects = [
     githubLink: "https://github.com/Rak-Code/customerfeedbackfront",
     image: "./AThena.png?height=200&width=400",
   },
-  // {
-  //   title: "AI-Powered Chatbot Platform",
-  //   description: "A chatbot application using Google Gemini AI with a scalable backend, interactive UI, and persistent conversation storage.",
-  //   technologies: ["Spring Boot", "React", "MongoDB"],
-  //   features: [
-  //     "AI Chatbot Integration with Google Gemini AI for intelligent responsess",
-  //     "Spring Boot Backend with WebFlux for non-blocking API calls",
-  //     "MongoDB Storage for persistent chat history",
-  //   ],
-  //   githubLink: "https://github.com/Rak-Code/GeminiChatBot",
-  //   image: "./Chatbot.png?height=200&width=400",
-  // },
   {
     title: "Quiz Application using Spring Boot",
     description: "A quiz application with user authentication, question management, and score tracking.",
     technologies: ["Spring Boot",  "MySQL", "Thymeleaf"],
-
     features: [
       "User authentication and role management",
       "Admin dashboard for managing quiz questions and categories",
@@ -73,19 +49,6 @@ const projects = [
     githubLink: "https://github.com/Rak-Code/QuizAppSpringBoot",
     image: "./Quiz.png?height=200&width=400",
   },
-  // {
-  //   title: "Authetication and Authorization System",
-  //   description: "A secure authentication and authorization system using Spring Security and JWT.",
-  //   technologies: ["Spring Boot", "MySQL", "React"],
-  //   features: [
-  //     "User registration and login with JWT",
-  //     "Role-based access control",
-  //     "Secure password storage and encryption",
-  //   ],
-  //   githubLink: "https://github.com/Rak-Code/SpringSecurity",
-  //   image: "./placeholder.svg?height=200&width=400",
-  // },
-    
 ]
 
 export default function Projects() {
@@ -100,64 +63,77 @@ export default function Projects() {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {projects.map((project, index) => (
-        <Card key={index} className="flex flex-col h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg overflow-hidden">
-          <div className="relative h-48 w-full">
-            <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-              <CardHeader className="text-white z-10 pb-4">
-                <CardTitle className="text-xl">{project.title}</CardTitle>
-              </CardHeader>
-            </div>
-          </div>
-
-          <CardContent className="flex-grow pt-4">
-            {/* Mobile View: Show expand/collapse button */}
-            <button 
-              className="md:hidden w-full flex items-center justify-between text-sm text-muted-foreground mb-2"
-              onClick={() => toggleCard(index)}
-            >
-              <span>Show {expandedCards.includes(index) ? 'less' : 'more'}</span>
-              {expandedCards.includes(index) ? (
-                <ChevronUp className="h-4 w-4" />
-              ) : (
-                <ChevronDown className="h-4 w-4" />
-              )}
-            </button>
-
-            {/* Description and features - hidden by default on mobile */}
-            <div className={`${expandedCards.includes(index) ? 'block' : 'hidden'} md:block`}>
-              <CardDescription className="mb-4">{project.description}</CardDescription>
-              <div className="mb-4 flex flex-wrap gap-2">
-                {project.technologies.map((tech) => (
-                  <Badge key={tech} variant="secondary" className="transition-all duration-300 hover:scale-105">
-                    {tech}
-                  </Badge>
-                ))}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+    >
+      {projects.map((project, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, x: idx % 2 === 0 ? -40 : 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7, delay: 0.2 * idx, ease: "easeOut" }}
+        >
+          <Card className="flex flex-col h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg overflow-hidden">
+            <div className="relative h-48 w-full">
+              <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <CardHeader className="text-white z-10 pb-4">
+                  <CardTitle className="text-xl">{project.title}</CardTitle>
+                </CardHeader>
               </div>
-              <div>
-                <h4 className="font-semibold mb-2">Key Features:</h4>
-                <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                  {project.features.map((feature, i) => (
-                    <li key={i}>{feature}</li>
+            </div>
+
+            <CardContent className="flex-grow pt-4">
+              {/* Mobile View: Show expand/collapse button */}
+              <button 
+                className="md:hidden w-full flex items-center justify-between text-sm text-muted-foreground mb-2"
+                onClick={() => toggleCard(idx)}
+              >
+                <span>Show {expandedCards.includes(idx) ? 'less' : 'more'}</span>
+                {expandedCards.includes(idx) ? (
+                  <ChevronUp className="h-4 w-4" />
+                ) : (
+                  <ChevronDown className="h-4 w-4" />
+                )}
+              </button>
+
+              {/* Description and features - hidden by default on mobile */}
+              <div className={`${expandedCards.includes(idx) ? 'block' : 'hidden'} md:block`}>
+                <CardDescription className="mb-4">{project.description}</CardDescription>
+                <div className="mb-4 flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <Badge key={tech} variant="secondary" className="transition-all duration-300 hover:scale-105">
+                      {tech}
+                    </Badge>
                   ))}
-                </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Key Features:</h4>
+                  <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+                    {project.features.map((feature, i) => (
+                      <li key={i}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          </CardContent>
+            </CardContent>
 
-          <CardFooter>
-            <Link href={project.githubLink} target="_blank" className="w-full">
-              <Button variant="outline" className="w-full transition-all duration-300 hover:scale-105">
-                <Github className="mr-2 h-4 w-4" />
-                View on GitHub
-              </Button>
-            </Link>
-          </CardFooter>
-        </Card>
+            <CardFooter>
+              <Link href={project.githubLink} target="_blank" className="w-full">
+                <Button variant="outline" className="w-full transition-all duration-300 hover:scale-105">
+                  <Github className="mr-2 h-4 w-4" />
+                  View on GitHub
+                </Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   )
 }
-

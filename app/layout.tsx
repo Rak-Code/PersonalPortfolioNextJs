@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import ScrollToTopButton from "@/components/scroll-to-top";
 
 // ✅ Corrected favicon path
 export const metadata: Metadata = {
@@ -54,6 +55,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           {children}
+          <ScrollToTopButton />
         </ThemeProvider>
         <Analytics />
       </body>
