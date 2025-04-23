@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   ],
   generator: "v0.dev",
   icons: {
-    icon: "/fabicon.ico", // ✅ Use root-relative path
+    icon: "/favicon.ico", // ✅ Use root-relative path and standard name
   },
 };
 
@@ -47,8 +47,8 @@ export default function RootLayout({
           content="-EWmRWoiBgHjFIWOiTMOYRrT9Ga09mN4qHnfSLuU7Zc"
         />
         {/* Favicons */}
-        <link rel="icon" href="/fabicon.ico" />
-        <link rel="shortcut icon" href="/fabicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </head>
       <body
         className={`${inter.className} min-h-screen bg-background antialiased`}

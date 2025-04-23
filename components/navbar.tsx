@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Menu, X, Github, Linkedin, Twitter } from "lucide-react"
 import { ModeToggle } from "./mode-toggle"
 import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,9 +18,15 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
         <div className="flex items-center">
-          <Link href="/" className="text-xl font-bold text-primary">
-            Portfolio 
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Link href="/" className="text-2xl font-semibold bg-gradient-to-r from-primary via-foreground to-primary bg-clip-text text-transparent tracking-wide">
+              <span className="text-3xl text-primary drop-shadow-sm font-semibold">P</span>ortfolio 
+            </Link>
+          </motion.div>
         </div>
 
         {/* Mobile menu button */}
@@ -151,4 +158,3 @@ export default function Navbar() {
     </header>
   )
 }
-

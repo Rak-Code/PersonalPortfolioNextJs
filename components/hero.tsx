@@ -25,7 +25,7 @@ export default function Hero() {
               <TypedWrapper
                 strings={[
                   "Java Full Stack Developer",
-                  "Spring Boot Rest API Development",
+                  "Spring Boot RestAPI",
                   "React Enthusiast",
                   "Backend Engineer",
                   "Freelance Web Developer",
