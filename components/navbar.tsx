@@ -24,7 +24,7 @@ export default function Navbar() {
             transition={{ duration: 0.6 }}
           >
             <Link href="/" className="text-2xl font-semibold bg-gradient-to-r from-primary via-foreground to-primary bg-clip-text text-transparent tracking-wide">
-              <span className="text-3xl text-primary drop-shadow-sm font-semibold">P</span>ortfolio 
+              Portfolio 
             </Link>
           </motion.div>
         </div>
