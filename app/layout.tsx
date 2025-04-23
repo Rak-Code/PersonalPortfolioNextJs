@@ -42,10 +42,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* ✅ Google Search Console Verification Meta Tag */}
-        <meta
-          name="google-site-verification"
-          content="-EWmRWoiBgHjFIWOiTMOYRrT9Ga09mN4qHnfSLuU7Zc"
-        />
+      <meta name="google-site-verification" content="Spwn1XNH-6c_YbWZkWNXxZsk_HiCZJr9Q6Yt5_hlROM" />
         {/* Favicons */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
