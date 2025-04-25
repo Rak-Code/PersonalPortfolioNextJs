@@ -26,17 +26,19 @@ const projects = [
     image: "/Athena2.png?height=200&width=400",
   },
   {
-    title: "Admin Dashboard ",
-    description: "A system for managing and providing feedback on assignments.",
-    technologies: ["Spring Boot", "React", "MySQL"],
+    title: "Personal Tech Blog",
+    description: "A sleek, frontend-only blog sharing simplified Java, Spring Boot, and React concepts for beginners, along with career tips and dev insights.",
+    technologies: ["Next.js", "Tailwind CSS", "storage.js", "JSON"],
     features: [
-      "Feedback mechanism for both admins and users",
-      "RESTful API endpoints for managing topics and feedback",
-      "Clean and straightforward user interface",
+      "Mobile-first responsive design",
+      "Posts loaded from local JSON data",
+      "Tag-based filtering for blog posts",
+      "Clean, developer-friendly UI with smooth navigation"
     ],
-    githubLink: "https://github.com/Rak-Code/customerfeedbackfront",
-    image: "./AThena.png?height=200&width=400",
+    githubLink: "https://front-end-compass-blog.lovable.app/",
+    image: "./Project2.png?height=200&width=400",
   },
+  
   {
     title: "Quiz Application using Spring Boot",
     description: "A quiz application with user authentication, question management, and score tracking.",
