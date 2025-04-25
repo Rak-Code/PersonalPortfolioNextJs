@@ -18,9 +18,9 @@ const experiences = [
     skills: ["React.js",  "Tailwind CSS", "Vercel", "Firebase"],
     projects: [
       {
-        name: "Modern Modeling Portfolio",
-        url: "https://v0-modern-modeling-portfolio.vercel.app/",
-        description: "Sleek portfolio for professional models"
+        name: "72Sports Ecommerce Website",
+        url: "https://72-sports.vercel.app/",
+        description: "Ecommerce website for sports merchandise"
       },
       {
         name: "Investment Banker Portfolio",
