@@ -26,18 +26,19 @@ const projects = [
     image: "/Athena2.png?height=200&width=400",
   },
   {
-    title: "Personal Tech Blog",
-    description: "A sleek, frontend-only blog sharing simplified Java, Spring Boot, and React concepts for beginners, along with career tips and dev insights.",
-    technologies: ["Next.js", "Tailwind CSS", "storage.js", "JSON"],
+    title: "Personal Portfolio Website",
+    description: "A responsive, SEO-optimized portfolio website showcasing projects, skills, and freelance work with integrated email communication support.",
+    technologies: ["React.js", "Next.js", "Tailwind CSS", "Node.js", "Nodemailer"],
     features: [
-      "Mobile-first responsive design",
-      "Posts loaded from local JSON data",
-      "Tag-based filtering for blog posts",
-      "Clean, developer-friendly UI with smooth navigation"
+      "Scalable architecture optimized for 10,000+ users",
+      "Mobile-first responsive and performance-optimized design",
+      "Dynamic contact form integration with SMTP email functionality",
+      "SEO best practices and fast-loading deployment via Vercel and Firebase"
     ],
-    githubLink: "https://front-end-compass-blog.lovable.app/",
-    image: "./Project2.png?height=200&width=400",
+    githubLink: "https://rakesh-gupta-portfolio-next-js-six.vercel.app/",
+    image: "./image.png?height=200&width=400",
   },
+  
   
   {
     title: "Quiz Application using Spring Boot",
