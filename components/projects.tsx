@@ -35,7 +35,7 @@ const projects = [
       "Dynamic contact form integration with SMTP email functionality",
       "SEO best practices and fast-loading deployment via Vercel and Google Search Console"
     ],
-    githubLink: "https://rakesh-gupta-portfolio-next-js-six.vercel.app/",
+    githubLink: "https://github.com/Rak-Code/PersonalPortfolioNextJs",
     image: "./image.png?height=200&width=400",
   },
   
