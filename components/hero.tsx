@@ -62,7 +62,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
         >
-          <Link href="./Rakesh_Gupta_CV.pdf" target="_blank">
+          <Link href="./Rakesh_Gupta_CV2025.pdf" target="_blank">
             <Button size="lg" className="font-medium transition-all duration-300 hover:scale-105">
               <FileText className="mr-2 h-5 w-5" />
               View My CV
