@@ -30,7 +30,7 @@ const projects = [
     description: "A responsive, SEO-optimized portfolio website showcasing projects, skills, and freelance work with integrated email communication support.",
     technologies: ["React.js", "Next.js", "Tailwind CSS", "Node.js", "Nodemailer"],
     features: [
-      "Scalable architecture optimized for 10,000+ users",
+      
       "Mobile-first responsive and performance-optimized design",
       "Dynamic contact form integration with SMTP email functionality",
       "SEO best practices and fast-loading deployment via Vercel and Firebase"
