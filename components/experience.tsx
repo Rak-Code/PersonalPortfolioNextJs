@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 const experiences = [
   {
-    title: "Freelance Web Developer",
+    title: "Web Developer Freelance",
     company: "Adita Enterprise",
     period: "April 2024 – Present",
     description: [
