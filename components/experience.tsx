@@ -10,8 +10,8 @@ const experiences = [
     company: "Adita Enterprise",
     period: "April 2024 – Present",
     description: [
-      "Designed and developed responsive portfolio websites",
-      "Integrated dynamic contact forms with email functionality",
+      "Designed and developed responsive Ecommerce & portfolio websites",
+      "Integrated dynamic messaging email functionality",
       "Deployed websites using Vercel and Firebase",
       "Collaborated with clients to understand their needs and deliver tailored solutions",
     ],
