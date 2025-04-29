@@ -28,12 +28,12 @@ const projects = [
   {
     title: "Personal Portfolio Website",
     description: "A responsive, SEO-optimized portfolio website showcasing projects, skills, and freelance work with integrated email communication support.",
-    technologies: ["React.js", "Next.js", "Tailwind CSS", "Node.js", "Nodemailer"],
+    technologies: ["React.js", "Next.js", "Tailwind CSS",  "Nodemailer"],
     features: [
       
       "Mobile-first responsive and performance-optimized design",
       "Dynamic contact form integration with SMTP email functionality",
-      "SEO best practices and fast-loading deployment via Vercel and Firebase"
+      "SEO best practices and fast-loading deployment via Vercel and Google Search Console"
     ],
     githubLink: "https://rakesh-gupta-portfolio-next-js-six.vercel.app/",
     image: "./image.png?height=200&width=400",
