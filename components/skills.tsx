@@ -26,7 +26,7 @@ const skillCategories = [
     skills: [
       { name: "Java", icon: <Coffee className="h-5 w-5" /> },
       { name: "Spring Boot", icon: <Layers className="h-5 w-5" /> },
-      { name: "RabbitMQ", icon: <Flame className="h-5 w-5" /> },
+      // { name: "RabbitMQ", icon: <Flame className="h-5 w-5" /> },
       { name: "Firebase", icon: <Flame className="h-5 w-5" /> },
     ],
     icon: <Server className="h-6 w-6" />, 
@@ -38,7 +38,7 @@ const skillCategories = [
       { name: "CSS3", icon: <LayoutGrid className="h-5 w-5" /> },
       { name: "JavaScript(ES6+)", icon: <Code2 className="h-5 w-5" /> },
       { name: "ReactJs", icon: <Boxes className="h-5 w-5" /> },
-      // { name: "Bootstrap", icon: <MonitorSmartphone className="h-5 w-5" /> },
+      { name: "Bootstrap", icon: <MonitorSmartphone className="h-5 w-5" /> },
     ],
     icon: <Globe className="h-6 w-6" />, 
   },
@@ -47,7 +47,7 @@ const skillCategories = [
     skills: [
       { name: "MySQL", icon: <Database className="h-5 w-5" /> },
       { name: "MongoDB", icon: <Database  className="h-5 w-5" /> },
-      { name: "Redis", icon: <Cable className="h-5 w-5" /> },
+      { name: "PostgreSQL", icon: <Cable className="h-5 w-5" /> },
     ],
     icon: <Database className="h-6 w-6" />, 
   },
