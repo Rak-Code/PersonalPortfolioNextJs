@@ -53,6 +53,8 @@ export default function GithubProfile() {
     )
   }
 
+
+  
   if (error) {
     return (
       <div className="text-center py-10">
