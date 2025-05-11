@@ -38,7 +38,7 @@ const skillCategories = [
       { name: "CSS3", icon: <LayoutGrid className="h-5 w-5" /> },
       { name: "JavaScript(ES6+)", icon: <Code2 className="h-5 w-5" /> },
       { name: "ReactJs", icon: <Boxes className="h-5 w-5" /> },
-      { name: "Bootstrap", icon: <MonitorSmartphone className="h-5 w-5" /> },
+    
     ],
     icon: <Globe className="h-6 w-6" />, 
   },
