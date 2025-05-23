@@ -41,16 +41,17 @@ const projects = [
   
   
   {
-    title: "Quiz Application using Spring Boot",
-    description: "A quiz application with user authentication, question management, and score tracking.",
-    technologies: ["Spring Boot",  "MySQL", "Thymeleaf"],
+    title: "Expense Tracker",
+    description: "Expense Tracker with user authentication and finances management.",
+    technologies: ["Next.js", "Firebase", "Tailwind CSS"],
     features: [
-      "User authentication and role management",
-      "Admin dashboard for managing quiz questions and categories",
-      "Real-time score tracking and leaderboard",
+     "User authentication and role management",
+     "Expense tracking and categorization",
+     "Budgeting and goal setting",
+     "Data visualization and reporting"
     ],
-    githubLink: "https://github.com/Rak-Code/QuizAppSpringBoot",
-    image: "./Quiz.png?height=200&width=400",
+    githubLink: "https://expense-tracker-iota-three.vercel.app/",
+    image: "./Expense.png?height=200&width=400",
   },
 ]
 
